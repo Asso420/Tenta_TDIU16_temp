@@ -1,0 +1,16 @@
+1: a) Mutual exclusion: Det finns resurser som kan bara allokeras av en tråd i taget.
+      No preemption: När en tråd håller en resurs får den inte tvingas av andra trådar att lämna resursen 
+      utan den får lämna resursen frivilligt.
+      Hold and wait: När en tråd håller en resurs medan den väntar på andra resurser för att allokera
+      Cirkel wait: När trådar håller resurser och väntar på varandras resurser att bli släpta i en cirkulär situation. 
+      t.ex A hålls av T1 och B hålls av T2, samtidigt T1 väntar på B och T2 väntar på A. 
+
+    b) Nej för att:
+
+      Mutual exclusion (uppfyld): då som det visas på grafen
+      No preemption: inget är är givet.
+      Hold and wait (uppfyld): Det finns trådar som både håller resurs och väntar på en annan resurs
+      t.ex T1 håller A och väntar på B 
+      Cirkel Wait (Inte uppfyld): det kommer att inte skapas en cirkulär situation där trådar väntar på varandras 
+      resurser. t.ex T1 håller A medan den väntar på B som hålls av T2 och T3, om T2 släpper B 
+      då kan T1 ha B och å andra sidan och T3 släpper A då kan T2 ta det utan att vänta på T1, att släppa den. 

@@ -1,0 +1,100 @@
+----- From SC83599 to EC0 @2025-08-25 17:48:08 regarding #regarding \#1
+Submitted file: '3/Uppg1.txt'
+
+----- From SC83599 to EC0 @2025-08-25 17:48:29 regarding #regarding \#2
+Submitted file: '4/stock_copy.c'
+
+----- From SC83599 to EC0 @2025-08-25 17:48:46 regarding #regarding \#3
+Submitted file: '5/stock_atomics.c'
+
+----- From SC83599 to EC0 @2025-08-25 17:49:03 regarding #regarding \#4
+Submitted file: '6/polygon.c'
+
+----- From SC83599 to EC0 @2025-08-25 17:58:25 regarding #regarding \#4
+Submitted file: '7/polygon.c'
+
+----- From SC83599 to EC0 @2025-08-25 17:59:53 regarding #regarding \#2
+Submitted file: '8/stock_copy.c'
+
+----- From EC36 to SC83599 @2025-08-26 07:54:28 regarding #regarding \#1
+Subject: 02.0p
+a: 2p
+b: 0p
+- T2 kan inte släppa B eftersom den väntar. Alla trådar väntar på varandra, systemet är i deadlock.
+
+----- From EC36 to SC83599 @2025-08-26 07:54:28 regarding #regarding \#1
+Assessment of assignment 1 resulted in 02.0p.
+
+----- From EC36 to SC83599 @2025-08-26 08:55:00 regarding #regarding \#2
+Subject: 02.0p
+a: 1p
+- 1 är korrekt, 2 och 3 ej besvarade.
+b: 0p
+- Du måste hålla låset från och med att du kontrollerar "name" till och med att du skriver till "name" i "stock_insert", annars löses inte problem 1: -2p
+- Du måste hålla låset för alla element i "stock_total_price" och alla element i "stock_update_price" annars löses inte problem 3: -1.5p
+- Du måste använda samma lås i "stock_insert", "stock_total_price" och "stock_update_price" då de arbetar med samma data: -2p
+- Du måste skydda läsningen av "name" i "stock_total_price": -1p
+c: 1p
+d: 0p
+- Du tar samma lås varje gång i loopen så trådarna kan behöva vänta på varandra.
+
+----- From EC36 to SC83599 @2025-08-26 08:55:00 regarding #regarding \#2
+Assessment of assignment 2 resulted in 02.0p.
+
+----- From EC36 to SC83599 @2025-08-26 09:04:51 regarding #regarding \#2
+Subject: 02.0p
+Se ovan.
+
+----- From EC36 to SC83599 @2025-08-26 09:04:51 regarding #regarding \#2
+Assessment of assignment 2 resulted in 02.0p.
+
+----- From EC36 to SC83599 @2025-08-26 10:14:34 regarding #regarding \#3
+Subject: 00.0p
+du kan inte ha ett villkor som första argument till compare_and_swap (du saknar också argument 3).
+du måste hantera alla läsningar och skrivningar till namn och pris.
+atomic_swap kan inte ha villkor som första parameter. Implementationen rensar också alla varor i total_price.
+
+----- From EC36 to SC83599 @2025-08-26 10:14:34 regarding #regarding \#3
+Assessment of assignment 3 resulted in 00.0p.
+
+----- From EC36 to SC83599 @2025-08-26 10:38:57 regarding #regarding \#4
+Subject: 02.0p
+a: 0.5p
+- 1: painter_worker frigör inte delat minne när den terminerar - "temp" är lokal.
+- 2: snarare att uppdateringen av polygons_tail inte uppdateras korrekt.
+- 3: ej besvarad
+b: 0.5p
+- Du har inverterat förklaringen av vad de väntar på.
+c: 0p
+- Busy-wait i painter_worker ej löst då du kör "sema_up" direkt när trådarna skapas (och för många "sema_up" på "sema_start".
+- Busy-wait i painter_draw ej löst - du anropar bara "sema_up", du väntar inte.
+- Problem 1 löses ej korrekt - "painter_create" väntar på att trådarna är klara - de blir inte klara förrän "finish" anropas.
+d: 1p
+- Du skyddar inte "polygon_tail" - den delas av flera trådar: -1p
+- Du skyddar inte uppdateringen av pixlar i "output": -1p
+e: 0p
+- Motiveringen förklarar inte varför det kan göras parallellt - att två semaforer finns påverkar ej.
+
+----- From EC36 to SC83599 @2025-08-26 10:38:57 regarding #regarding \#4
+Assessment of assignment 4 resulted in 02.0p.
+
+----- From EC36 to SC83599 @2025-08-26 11:10:49 regarding #regarding \#4
+Subject: 02.0p
+Se ovan.
+
+----- From EC36 to SC83599 @2025-08-26 11:10:49 regarding #regarding \#4
+Assessment of assignment 4 resulted in 02.0p.
+
+Summary of grades:
+Assignment 1:  2.0p
+Total:     2.0p
+
+Assignment 2:  2.0p
+Total:     4.0p
+
+Assignment 3:  0.0p
+Total:     4.0p
+
+Assignment 4:  2.0p
+Total:     6.0p
+
