@@ -1,0 +1,13 @@
+(a): 
+Mutual exclusion: En resurs får hålla av en tråd i taget. De andra trådearna får vänta.
+No Preemption: En tråd ska inte bli tvingad att lämna resursen utan den får lämna resursen frivilligt när den är klar.
+Hold and wait: En tråd kan vänta på andra resurser medans den håller en annan resurs. 
+Cirkle wait: När en tråd t.ex T1 håller i resurs A och väntar på resurs B som i sin tur hålls av tråd T2. Samtidigt tråd T2 väntar på 
+resurs A att bli släppt, då resurs A hålls av tråd T1.
+
+(b):
+    Ja, vi har deadlock mellan trådarna T1 och T2 som håller resursarna A och B. 
+    Mutual exclusion: uppfylld, då T1 och T2 håller var sin resurs A och B
+    No Preemption: uppfylld, Ingen täcken på att T1 och T2 tvigas att lämna resursarna för än de är klara.
+    Hold and wait: uppfylld, Då T1 håller B och väntar på A, medans T2 håller A och väntar på B.
+    Cirkle wait: uppfylld, Då har det skapats en cirkle, att tråtarna väntar på varandras resurser att bli släppta. 

@@ -1,0 +1,173 @@
+----- From EC36 to SC0 @2025-01-10 14:33:08 regarding #
+Subject: Kommentar i början av givna filer
+Jag fick påpekat att jag missade att lägga in en kommentar för svar i början av de givna filerna.
+
+Den finns där nu.
+
+Helt OK om ni lägger till en egen kommentar i början av filen ni skickar in ifall ni har börjat göra någon av uppgifterna.
+
+----- From EC36 to SC0 @2025-01-10 16:42:49 regarding #regarding \#4
+Subject: Numrering i (c) och (d)
+Jag fick påpekat att numreringen i (c) och (d) inte blivit rätt. Nedan är som det ska vara:
+
+(c) problemet i del (a) samt punkt 2
+(d) punkt 1 och 3
+
+Uppdaterad PDF finns som exam2.pdf.
+
+Detta påverkar dock inte vad som ska lösas, bara hur poängen fördelas.
+
+----- From SC81449 to EC0 @2025-01-10 17:06:54 regarding #regarding \#4
+Subject: (empty)
+Jag vet inte om du kan svara på detta.   om kör sema_down ( istruct p) som tillhör en egen struct. kan man köra sema_up (i struct f) som tillhör och deklarert i en annan struct med samma sem_down ?
+
+----- From EC36 to SC81449 @2025-01-10 17:09:51 regarding #regarding \#4
+Subject: Re:
+I C spelar det ingen roll vilken struct som en viss funktion tillhör. Så du kan använda vilken semafor du vill, så länge du har ett sätt att komma åt semaforen du vill använda.
+
+
+ > Jag vet inte om du kan svara på detta.   om kör sema_down ( istruct p) som tillhör en egen struct. kan man köra sema_up (i struct f) som tillhör och deklarert i en annan struct med samma sem_down ?
+
+----- From SC81449 to EC0 @2025-01-10 17:50:30 regarding #regarding \#1
+Submitted file: '4/uppgift1.txt'
+
+----- From SC81449 to EC0 @2025-01-10 17:51:18 regarding #regarding \#2
+Submitted file: '5/cinema.c'
+
+----- From SC81449 to EC0 @2025-01-10 17:51:39 regarding #regarding \#3
+Submitted file: '6/cinema_atomics.c'
+
+----- From SC81449 to EC0 @2025-01-10 17:51:55 regarding #regarding \#4
+Submitted file: '7/compile_sched.c'
+
+----- From SC81449 to EC0 @2025-01-10 17:53:36 regarding #regarding \#1
+Submitted file: '8/uppgift1.txt'
+
+----- From SC81449 to EC0 @2025-01-10 17:53:50 regarding #regarding \#2
+Submitted file: '9/my_cinema.c'
+
+----- From SC81449 to EC0 @2025-01-10 17:54:03 regarding #regarding \#3
+Submitted file: '10/my_cinema_atomics.c'
+
+----- From SC81449 to EC0 @2025-01-10 17:54:17 regarding #regarding \#4
+Submitted file: '11/my_compile_sched.c'
+
+----- From SC81449 to EC0 @2025-01-10 17:57:19 regarding #regarding \#3
+Submitted file: '12/my_cinema_atomics.c'
+
+----- From SC81449 to EC0 @2025-01-10 17:59:48 regarding #regarding \#1
+Submitted file: '13/uppgift1.txt'
+
+----- From SC81449 to EC0 @2025-01-10 18:00:03 regarding #regarding \#2
+Submitted file: '14/my_cinema.c'
+
+----- From EC36 to SC81449 @2025-01-15 12:09:39 regarding #regarding \#1
+Subject: 04.0p
+
+
+----- From EC36 to SC81449 @2025-01-15 12:09:39 regarding #regarding \#1
+Assessment of assignment 1 resulted in 04.0p.
+
+----- From EC36 to SC81449 @2025-01-15 12:13:36 regarding #regarding \#1
+Subject: 04.0p
+Se ovan.
+
+----- From EC36 to SC81449 @2025-01-15 12:13:36 regarding #regarding \#1
+Assessment of assignment 1 resulted in 04.0p.
+
+----- From EC36 to SC81449 @2025-01-15 12:15:34 regarding #regarding \#1
+Subject: 04.0p
+Se ovan.
+
+----- From EC36 to SC81449 @2025-01-15 12:15:34 regarding #regarding \#1
+Assessment of assignment 1 resulted in 04.0p.
+
+----- From EC36 to SC81449 @2025-01-15 13:07:37 regarding #regarding \#2
+Subject: 05.0p
+a: 2p
+- Scenario 3: Varför lyckas båda?
+b: 1p
+- Du använder två olika lås för samma resurs, detta förhindrar inte problem nummer 3: -2p
+- "reserved_lock" behövs inte, och leder till deadlock i och med att du släpper det efter "return". "successfully_reserved" är inte delad: -1p
+- Du släpper inte alla lås du tar i "screening_book".
+c: 1p
+d: 1p
+e: 0p
+- Nej, i och med att du släpper låsen efter att du har lämnat tillbaka bokningarna så är svaret "ja".
+
+----- From EC36 to SC81449 @2025-01-15 13:07:37 regarding #regarding \#2
+Assessment of assignment 2 resulted in 05.0p.
+
+----- From EC36 to SC81449 @2025-01-15 13:25:51 regarding #regarding \#2
+Subject: 05.0p
+Se ovan.
+
+----- From EC36 to SC81449 @2025-01-15 13:25:51 regarding #regarding \#2
+Assessment of assignment 2 resulted in 05.0p.
+
+----- From EC36 to SC81449 @2025-01-15 14:04:02 regarding #regarding \#2
+Subject: 05.0p
+Se ovan.
+
+----- From EC36 to SC81449 @2025-01-15 14:04:02 regarding #regarding \#2
+Assessment of assignment 2 resulted in 05.0p.
+
+----- From EC36 to SC81449 @2025-01-15 15:03:37 regarding #regarding \#3
+Subject: 00.0p
+Löser inte problemen i originalkoden. "successfully_reserved" är inte delad. "atomic_read" kan inte användas för att skriva till en variabel.
+
+----- From EC36 to SC81449 @2025-01-15 15:03:37 regarding #regarding \#3
+Assessment of assignment 3 resulted in 00.0p.
+
+----- From EC36 to SC81449 @2025-01-15 15:06:44 regarding #regarding \#3
+Subject: 00.0p
+Se ovan.
+
+----- From EC36 to SC81449 @2025-01-15 15:06:44 regarding #regarding \#3
+Assessment of assignment 3 resulted in 00.0p.
+
+----- From EC36 to SC81449 @2025-01-15 15:06:49 regarding #regarding \#3
+Subject: 00.0p
+Se ovan.
+
+----- From EC36 to SC81449 @2025-01-15 15:06:49 regarding #regarding \#3
+Assessment of assignment 3 resulted in 00.0p.
+
+----- From EC36 to SC81449 @2025-01-15 16:09:53 regarding #regarding \#4
+Subject: 02.0p
+a: 0p
+- "p->max_jobs" är enligt specifikationen inte delad mellan trådar.
+b: 2p
+c: 0p
+(detta är för att se till så att tillräckligt få filer kompileras samtidigt)
+- Du skyddar inte "jobs_running". Semaforen "file_sema" ger deadlock (initiering till 0 och 4 st sema_down).
+- Du väntar inte på att det ska gå att köra jobbet, utan du ignorerar körningen om det inte finns "ledigt".
+d: 0p
+(detta är för att se till så att filer kompileras i rätt ordning, samt att alla är klara)
+- Varken 1 eller 3 är lösta.
+e: 0p
+- Detta svarar inte på frågan.
+
+----- From EC36 to SC81449 @2025-01-15 16:09:53 regarding #regarding \#4
+Assessment of assignment 4 resulted in 02.0p.
+
+----- From EC36 to SC81449 @2025-01-15 16:13:18 regarding #regarding \#4
+Subject: 02.0p
+Se ovan.
+
+----- From EC36 to SC81449 @2025-01-15 16:13:18 regarding #regarding \#4
+Assessment of assignment 4 resulted in 02.0p.
+
+Summary of grades:
+Assignment 1:  4.0p
+Total:     4.0p
+
+Assignment 2:  5.0p
+Total:     9.0p
+
+Assignment 3:  0.0p
+Total:     9.0p
+
+Assignment 4:  2.0p
+Total:    11.0p
+
