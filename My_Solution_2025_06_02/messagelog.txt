@@ -1,0 +1,136 @@
+----- From EC36 to SC0 @2025-06-02 08:14:25 regarding #regarding \#2
+Subject: Total mängd pengar
+I uppgift 2 står det att totala summan borde bli 2 000 kr på 2 ställen. Detta matchar dock inte vad som sker i testet. 200 * 100 blir naturligtvis 20 000 kr. Så det ska stå 20 000 kr på dessa ställen.
+
+----- From EC36 to SC0 @2025-06-02 10:45:17 regarding #regarding \#4
+Subject: Pixelvärden
+Det finns två kommentarer gällande vad ett pixelvärde av 0 betyder i uppgiften. Kommentaren ovanför struct picture är korrekt. Det vill säga, 0 är svart och "max_value" är vitt.
+
+----- From SC82919 to EC0 @2025-06-02 11:49:07 regarding #regarding \#1
+Submitted file: '3/uppgift1.txt'
+
+----- From SC82919 to EC0 @2025-06-02 11:49:30 regarding #regarding \#2
+Submitted file: '4/copy_bank.c'
+
+----- From SC82919 to EC0 @2025-06-02 11:49:49 regarding #regarding \#3
+Submitted file: '5/bank_atomics.c'
+
+----- From SC82919 to EC0 @2025-06-02 11:50:07 regarding #regarding \#4
+Submitted file: '6/copy_smudge.c'
+
+----- From SC82919 to EC0 @2025-06-02 11:56:53 regarding #regarding \#1
+Submitted file: '7/uppgift1.txt'
+
+----- From SC82919 to EC0 @2025-06-02 11:57:24 regarding #regarding \#2
+Submitted file: '8/copy_bank.c'
+
+----- From SC82919 to EC0 @2025-06-02 11:57:47 regarding #regarding \#3
+Submitted file: '9/bank_atomics.c'
+
+----- From SC82919 to EC0 @2025-06-02 11:58:02 regarding #regarding \#4
+Submitted file: '10/copy_smudge.c'
+
+----- From EC334 to SC82919 @2025-06-03 11:34:55 regarding #regarding \#1
+Subject: 01.5p
+a: 1.5p
+	- Mutual exclusion felaktig: -0.5p
+b: 0p
+	- Systemet är ej i deadlock: -2p
+
+----- From EC334 to SC82919 @2025-06-03 11:34:55 regarding #regarding \#1
+Assessment of assignment 1 resulted in 01.5p.
+
+----- From EC334 to SC82919 @2025-06-03 11:37:58 regarding #regarding \#1
+Subject: 01.5p
+Se ovan.
+
+----- From EC334 to SC82919 @2025-06-03 11:37:58 regarding #regarding \#1
+Assessment of assignment 1 resulted in 01.5p.
+
+----- From EC308 to SC82919 @2025-06-03 12:42:42 regarding #regarding \#3
+Subject: 00.0p
+Total poäng (A):
+0p: Lösningen fungerar inte. I if-satsen behöver vi både läsa och ändra på bank.name atomiskt med t.ex. compare_and_swap, annars kan ett trådbyte ske mellan read -> write vilket leder till en inkorrekt lösning.
+
+Total poäng (B): 0p
+Vi kan inte garantera att implementationen av print kommer att fungera med endast atomiska operationer. I och med att namnet och balansen måste sättas separat kan ett trådbyte ske mellan dessa två skrivningar, vilket gör att print visar fel saldo för ett givet konto.
+
+----- From EC308 to SC82919 @2025-06-03 12:42:42 regarding #regarding \#3
+Assessment of assignment 3 resulted in 00.0p.
+
+----- From EC308 to SC82919 @2025-06-03 13:02:38 regarding #regarding \#3
+Subject: 00.0p
+Se ovan.
+
+----- From EC308 to SC82919 @2025-06-03 13:02:38 regarding #regarding \#3
+Assessment of assignment 3 resulted in 00.0p.
+
+----- From EC36 to SC82919 @2025-06-04 13:18:23 regarding #regarding \#2
+Subject: 01.0p
+a: 0p
+- 1: Du säger först att två kontonummer skapas, sedan säger du att de skriver över varandra. Det låter som att "unused" är delad, vilket inte är fallet. Exemplet för varför olika många konton skapas stämmer inte heller.
+- 2: Nej, "from" och "to" är lokala variabler.
+- 3: Exempel saknas.
+b: 0p
+- Eftersom de olika funktionerna arbetar på samma data måste du använda samma lås i alla funktionerna: -2p
+- din synkronisering av 'bank_new_account' löser inte problem 1 i (a), du måste hålla låst hela vägen tills du sparar kontot: -1.5p
+- din lösning i 'bank_close_account' löser inte problem 2 i (a), du måste hålla låset/låsen från if-satserna tills du har uppdaterat båda kontona: -1.5p
+- bank_print är inte synkroniserad: -2p
+- Ett lås per konto ger bättre parallellism: -2p
+c: 1p
+d: 0p
+- Nej, du använder ett lås för alla konton.
+
+----- From EC36 to SC82919 @2025-06-04 13:18:23 regarding #regarding \#2
+Assessment of assignment 2 resulted in 01.0p.
+
+----- From EC262 to SC82919 @2025-06-04 14:38:43 regarding #regarding \#4
+Subject: 02.0p
+a) 1p                                                                                      
+-1p: Fel svar på delfråga 1.                                                            
+-1p: Inget svar på delfråga 2.                                                          
+                                                                                        
+b) 1p                                                                                   
+                                                                                        
+c) 0p                                                                                   
+-1p: Redudant semafor sema_start.                                                                  -2p: smudge_worker() signalerar att den är färdig efter en iteration i while-loopen     
+-2p: for-loopen i picture_smudge() använder helt orelevanta värden                                                                             
+d) 0p                                                                                   
+-3p: Lösning saknas.                                                                    
+-2p: Lås i smudge_pixel().                                                              
+                                                                                        
+e) 0p                                                                                   
+-1p: Svaret är inte kopplat till lösningen                                              
+                                                                                        
+Totalt: 2p
+
+----- From EC262 to SC82919 @2025-06-04 14:38:43 regarding #regarding \#4
+Assessment of assignment 4 resulted in 02.0p.
+
+----- From EC36 to SC82919 @2025-06-04 15:54:11 regarding #regarding \#2
+Subject: 01.0p
+Se ovan.
+
+----- From EC36 to SC82919 @2025-06-04 15:54:11 regarding #regarding \#2
+Assessment of assignment 2 resulted in 01.0p.
+
+----- From EC262 to SC82919 @2025-06-04 16:13:22 regarding #regarding \#4
+Subject: 02.0p
+Se ovan.
+
+----- From EC262 to SC82919 @2025-06-04 16:13:22 regarding #regarding \#4
+Assessment of assignment 4 resulted in 02.0p.
+
+Summary of grades:
+Assignment 1:  1.5p
+Total:     1.5p
+
+Assignment 3:  0.0p
+Total:     1.5p
+
+Assignment 2:  1.0p
+Total:     2.5p
+
+Assignment 4:  2.0p
+Total:     4.5p
+
